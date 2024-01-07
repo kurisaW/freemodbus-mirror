@@ -296,6 +296,7 @@ eMBMasterPoll( void )
         {
         case EV_MASTER_READY:
             eMBState = STATE_ESTABLISHED;
+			vMBMasterRunResRelease();	/**< add by leo */
             break;
 
         case EV_MASTER_FRAME_RECEIVED:
